@@ -55,6 +55,7 @@ function getData() {
         url: "https://pomber.github.io/covid19/timeseries.json", 
         beforeSend: function(){
 
+            $("#status").text("Loading ....")
             console.log("Loading");
 
         },
@@ -62,6 +63,7 @@ function getData() {
         
             datasource = result;
             console.log("Ready")
+            $("#status").text("COVID - 19 Dashboard")
 
         }
     });
