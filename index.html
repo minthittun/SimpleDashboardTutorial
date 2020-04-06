@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="libraries/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="libraries/jqvmap/jquery.vmap.js"></script>
+    <script type="text/javascript" src="libraries/jqvmap/maps/jquery.vmap.world.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="scripts/app.js" ></script>
+
+</head>
+<body>
+    
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        <div id="main_wrapper">
+            <div id="left_column">
+                
+                <div id="head_title">
+                    <h2>COVID - 19 Dashboard</h2>
+                </div>
+
+                <div id="vmap" style="width: 100%; height: 100%;"></div>
+
+            </div>
+            <div id="right_column">
+
+                <div style="position: relative; width: 100%; height: 100%; ">
+
+                    <div style="position: absolute; width: 100%; height: 50%; top: 0;">
+                       
+                        <div>
+                            <div style="float: left; width: 30%;">
+                
+                                <div style="text-align: center; margin-top: 30px;">
+                                    <span class="font_large" id="country"></h2>
+                                </div>
+                                <div class="box">
+                                    <div style="margin-bottom: 5px;">
+                                        <span class="font_blue">Confirmed</span>
+                                    </div>
+                                    <div>
+                                        <span class="font_large" id="confirmed"></span>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div style="margin-bottom: 5px;">
+                                        <span class="font_blue">Deaths</span>
+                                    </div>
+                                    <div>
+                                        <span class="font_large" id="deaths"></span>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div style="margin-bottom: 5px;">
+                                        <span class="font_blue">Recovered</span>
+                                    </div>
+                                    <div>
+                                        <span class="font_large" id="recovered"></span>
+                                    </div>
+                                </div>
+                
+                            </div>
+                            <div style="float: right; width: 60%;">
+                                <canvas id="myChart" width="100%" height="85%"></canvas>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </div>
+
+                    </div>
+
+                    <div style="position: absolute; width: 100%; height: 50%; bottom: 0; overflow: auto;">
+
+                        <table class="right_table">
+                            <thead>
+                                <tr>
+                                    <th>Date (YYYY-MM-DD)</th>
+                                    <th>Confirmed</th>
+                                    <th>Deaths</th>
+                                    <th>Recovered</th>
+                                </tr>
+                            </thead>
+                            <tbody id="right_table"></tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
