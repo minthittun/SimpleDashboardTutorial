@@ -25,24 +25,7 @@ jQuery(document).ready(function() {
                     result = datasource[region];
                 }
 
-                //Show detail list
-                $("#right_table").empty();
-                for(var v = result.length - 1; v>=0; v--){
-
-                    $("#right_table").append("<tr>"
-                        + "<td>"+result[v].date+"</td>"
-                        + "<td>"+result[v].confirmed+"</td>"
-                        + "<td>"+result[v].deaths+"</td>"
-                        + "<td>"+result[v].recovered+"</td>"
-                        + "</tr>");
-
-                }
-
-                //Show latest record only
-                showLatest(region, result[result.length - 1]);
-
-                //show chart
-                showChart(result);
+                showData(region, result)
 
             }
         }
@@ -65,8 +48,32 @@ function getData() {
             console.log("Ready")
             $("#status").text("COVID - 19 Dashboard")
 
+            //Show initial data
+            showData("Myanmar", datasource["Burma"])
+
         }
     });
+}
+
+function showData(region, result){
+    //Show detail list
+    $("#right_table").empty();
+    for(var v = result.length - 1; v>=0; v--){
+
+        $("#right_table").append("<tr>"
+            + "<td>"+result[v].date+"</td>"
+            + "<td>"+result[v].confirmed+"</td>"
+            + "<td>"+result[v].deaths+"</td>"
+            + "<td>"+result[v].recovered+"</td>"
+            + "</tr>");
+
+    }
+
+    //Show latest record only
+    showLatest(region, result[result.length - 1]);
+
+    //show chart
+    showChart(result);
 }
 
 function showLatest(country, obj) {
