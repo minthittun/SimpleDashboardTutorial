@@ -36,21 +36,21 @@ table.right_table td, table.right_table th {
     padding: 8px;
 }
 
-table.right_table tr:nth-child(even){background-color: #042f4f;}
+table.right_table tr:nth-child(even){background-color: RGBA(4,47,79,0.3);}
 
-table.right_table tr:hover {background-color: #0c4e7e;}
+table.right_table tr:hover {background-color: RGBA(12,78,126,0.5);}
 
 table.right_table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #0c4e7e;
+    background-color: RGBA(4,47,79,0.3);
     color: white;
 }
 
 #head_title{
-    background: #042f4f; 
-    opacity: 0.6; 
+    background: RGBA(4,47,79,0.3); 
+    border: solid 1px RGBA(4,47,79,0.3);
     width: 300px; 
     position: absolute; 
     top: 0; 
